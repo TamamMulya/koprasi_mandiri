@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Usaha</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="brand"> <img src="./assets/logo_kud.png" class="logo-kud" /></a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="../index.html">Beranda</a>
+          <a href="../Gabung/index.html">Gabung Segera</a>
+          <a href="../index.html#kontak">Kontak</a>
+        </div>
+      </div>
+    </header>
+    <section class="home">
+      <video class="video-slide active" src="./assets/unitmodal.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="./assets/unitwarung.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="./assets/unittani.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="./assets/unitdesa.mp4" autoplay muted loop></video>
+      <div class="content active" id="unitmodal">
+        <h1>Unit Modal. <br /><span> Kita </span></h1>
+        <p>
+          Modal Kita adalah brand dari kegiatan usaha simpan pinjam yang akan mewujudkan kegiatan usaha simpan-pinjam Koperasi yang mandiri, profesional dan berkelanjutan sebagai basis mengembangkan sistem ekonomi gotong royong di perdesaan
+          secara produktif.
+        </p>
+      </div>
+      <div class="content" id="warung">
+        <h1>Unit Warung. <br /><span> Kita </span></h1>
+        <p>
+          Warung Kita adalah Brand kegiatan usaha perdagangan kulakan dan eceran untuk Meningkatnya kesejahteraan masyarakat desa melalui penyediaan pangan terjangkau, dan berkembangnya rantai nilai usaha eceran Anggota Koperasi yang
+          efisien. Unit usaha perdagangan Warung Kita merupakan unit usaha koperasi untuk memperkuat rantai pasokan pedagang eceran di desa dengan harga yang rasional.
+        </p>
+      </div>
+      <div class="content" id="tani">
+        <h1>Unit Tani. <br /><span> Kita </span></h1>
+        <p>
+          Tani Kita adalah Brand kegiatan usaha Agribisnis untuk mewujudkan Usaha Tani Anggota Koperasi dalam Sistem Agribisnis Terpadu yang dikelola oleh Koperasi secara Profesional dan Berkelanjutan. Unit usaha Agribisnis (Tani Kita) KUD
+          Kartini Mandiri Lestari dimaksudkan untuk mengoptimalkan potensi agribisnis dan agrowisata Desa guna mendorong arus investasi ke desa melalui koperasi dengan mengembangkan produk unggulan desa.
+        </p>
+      </div>
+      <div class="content" id="desa">
+        <h1>Unit Desa. <br /><span> Kita </span></h1>
+        <p>
+          Desa Kita adalah Brand kegiatan usaha Pariwisata, pelayanan jasa dan pusat perekonomian desa untuk mewujudkan Usaha Desa Kita Koperasi secara Profesional dan Berkelanjutan membangun kerjasama dengan pihak desa terutama Bumdes
+          untuk mengembangkan potensi-potensi sumberdaya alam desa yang bisa dikembangkan, guna mendorong arus investasi ke desa melalui koperasi dengan mengembangkan objek wisata, penginapan pusat perekonomian lainya.
+        </p>
+      </div>
+      <div class="media-icons">
+        <a href="https://web.facebook.com/kud.kartinimadirilestari"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/kud.kml.pasarean"><i class="fab fa-instagram"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+      //Javascript menu navigasi
+      const menuBtn = document.querySelector(".menu-btn");
+      const navigation = document.querySelector(".navigation");
+
+      menuBtn.addEventListener("click", () => {
+        menuBtn.classList.toggle("active");
+        navigation.classList.toggle("active");
+      });
+
+      //Javascript untuk video slider navigation
+
+      const btns = document.querySelectorAll(".nav-btn");
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+
+      var sliderNav = function (manual) {
+        btns.forEach((btn) => {
+          btn.classList.remove("active");
+        });
+        slides.forEach((slide) => {
+          slide.classList.remove("active");
+        });
+        contents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        btns[manual].classList.add("active");
+        slides[manual].classList.add("active");
+        contents[manual].classList.add("active");
+      };
+
+      btns.forEach((btn, i) => {
+        btn.addEventListener("click", () => {
+          sliderNav(i);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<!--=== Coding by CodingLab | www.codinglabweb.com === -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!----===== Iconscout CSS ===== -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+    <title>Gabung Bersama Kami</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>Registrasi Keanggotaan Koperasi</header>
+
+      <form action="../Gabung/connect.php" method="post">
+        <div class="form_first">
+          <div class="details personal">
+            <span class="title">Data Pribadi</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label for="nama" class="form-label">Nama Lengkap</label>
+                <input type="text" placeholder="Masukkan Nama" id="nama" name="nama" required />
+              </div>
+
+              <div class="input-field">
+                <label for="tanggal" class="form-label">Tanggal Lahir</label>
+                <input type="date" placeholder="Masukkan Tanggal Lahir" id="tanggal" name="tanggal" required />
+              </div>
+
+              <div class="input-field">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" placeholder="Masukkan Email" id="email" name="email" required />
+              </div>
+
+              <div class="input-field">
+                <label for="notelp">Nomor Handphone</label>
+                <input type="number" placeholder="Masukkan Nomor Handphone" id="notelp" name="notelp" required />
+              </div>
+
+              <div class="input-field">
+                <label for="kelamin" class="form-label">Jenis Kelamin</label>
+                <select id="kelamin" name="kelamin" required>
+                  <option disabled selected>Pilih Jenis Kelamin</option>
+                  <option>Laki-laki</option>
+                  <option>Perempuan</option>
+                  <option>Lainnya</option>
+                </select>
+              </div>
+
+              <div class="input-field">
+                <label for="pekerjaan" class="form-label">Pekerjaan</label>
+                <input type="text" placeholder="Masukkan Pekerjaan" id="pekerjaan" name="pekerjaan"/>
+              </div>
+            </div>
+          </div>
+
+          <div class="details address">
+            <span class="title">Detail Alamat</span>
+
+            <div class="fields">
+              <div class="input-field">
+                <label for="provinsi" class="form-label">Provinsi</label>
+                <input type="text" placeholder="Masukkan Nama Provinsi" id="provinsi" name="provinsi" required />
+              </div>
+
+              <div class="input-field">
+                <label for="kota" class="form-label">Kabupaten / Kota</label>
+                <input type="text" placeholder="Masukkan Nama Kabupaten/Kota" id="kota" name="kota" required />
+              </div>
+
+              <div class="input-field">
+                <label for="kecamatan" class="form-label">Kecamatan</label>
+                <input type="text" placeholder="Masukkan Nama Kecamatan" id="kecamatan" name="kecamatan" required />
+              </div>
+
+              <div class="input-field">
+                <label for="kelurahan" class="form-label">Kelurahan</label>
+                <input type="text" placeholder="Masukkan Nama Kelurahan" id="kelurahan" name="kelurahan" required />
+              </div>
+
+              <div class="input-field">
+                <label for="jalan" class="form-label">Nama Jalan</label>
+                <input type="text" placeholder="Masukkan Nama Jalan" id="jalan" name="jalan" required />
+              </div>
+
+              <div class="input-field">
+                <label for="desa" class="form-label">Desa / Dusun</label>
+                <input type="text" placeholder="Masukkan Nama Desa/Dusun" id="desa" name="desa" required />
+              </div>
+            </div>
+
+  
+          <div class="details keanggotaan">
+            <span class="title">Data Keanggotaan</span>
+
+            <div class="input-field">
+              <label for="sumber" class="form-label">Asal Sumber Informasi Mengenai Koperasi Diterima</label>
+              <select id="sumber" name="sumber" required>
+                <option disabled selected>Asal Sumber</option>
+                <option>Media Sosial</option>
+                <option>Brosur</option>
+                <option>Orang Terdekat</option>
+                <option>Lainnya</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label for="minat" class="form-label">Minat Unit Usaha</label>
+              <select id="minat" name="minat" required>
+                <option disabled selected>Pilih Unit Usaha</option>
+                <option>Modal Kita</option>
+                <option>Warung Kita</option>
+                <option>Tani Kita</option>
+                <option>Desa Kita</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label for="alasan" class="form-label">Alasan Anda Bergabung</label>
+              <input type="text" placeholder="Masukkan Alasan Anda" id="alasan" name="alasan" required />
+            </div>
+
+              <button class="sumbit">
+                <span class="btnText">Submit</span>
+                <i class="uil uil-navigator"></i>
+              </button>
+            </div>
+          </div>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
